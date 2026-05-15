@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/@media.css">
+    <link rel="stylesheet" href="styles/@keyframes.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=code_xml,coffee,keyboard_double_arrow_up,light,nightlight,pets,progress_activity,sunny" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <section class="principal">
+        <button id="themeButton" class="material-symbols-outlined">nightlight</button>
+        <div class="principal--flotatingBox"></div>
+        <div class="principal--flotatingBoxT"></div>
+        <div class="principal--flotatingBoxT2"><span class="principal--arrow material-symbols-outlined">pets</span></div>
+        <div></div>
+        <div class="principal__about">
+            <div class="principal__about--img"></div>
+            <h1>C701 Napzilon</h1>
+            <p class="principal__about--description">17 años, español nativo, ingles B2, ruso A2, Software dev, Digital artist</p>
+        </div>
+        <div class="principal__social">
+            <a target="_blank"href="" class="principal__social--card roblox">
+                <img class="principal__social--cardIcon" src="archives/images/icons/robloxIcon.png" alt="">
+                / Roblox
+            </a>
+            <a target="_blank" href="" class="x principal__social--card">
+                <img class="principal__social--cardIcon" src="archives/images/icons/x.png" alt="">
+                / Twiter
+            </a>
+            <a target="_blank" href="" class="principal__social--card">
+                <img class="principal__social--cardIcon" src="archives/images/icons/discord.png" alt="">
+                / Discord
+            </a>
+            <a target="_blank" href="" class="x principal__social--card">
+                <img class="tiktokimage principal__social--cardIcon" src="archives/images/icons/tiktok.png" alt="">
+                / Tiktok
+            </a>
+            <a href="" class="telegram principal__social--card">
+                <img target="_blank"  class="principal__social--cardIcon" src="archives/images/icons/telegram.png" alt="">
+                / Telegram
+            </a>
+        </div>
+        <span class="principal--arrow material-symbols-outlined">keyboard_double_arrow_up</span>
+        <div id="click-select" class="navItem--select" >
+                <div>
+                    <span class="navItem--select-icon material-symbols-outlined">language</span>
+                </div>
+                <div>
+                    <select id="language-selector">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                <option value="ru">Русский</option>
+            </select>
+            </div>
+        </div>
+    </section>
+    <main class="main">
+        <div class="mainGrid">
+            <div id="visor-3d-container">
+                <model-viewer 
+                id="avatar-niko"
+                src="archives/3d_objets/sentado.glb" 
+                alt="Tu nabegador no soporta modelos 3d"
+                camera-controls 
+                orientation="0deg 0deg 180deg"
+                camera-orbit="-20deg 90deg 0%" 
+                camera-target="0m 3m 0m"
+                interaction-prompt="none"
+                shadow-intensity="1">
+                </model-viewer>
+            </div>
+            <div class="mainGrid__about">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error ipsum necessitatibus voluptas recusandae repellat quam consequatur deleniti mollitia nesciunt voluptates amet, facilis ducimus blanditiis earum harum laborum quasi, esse tempore!
+            </div>
+            <div class="mainGrid__message">
+                <form id="mensajeAnonimo" action="POST">
+                    <p class="mainGrid__message--title">Enviame un mensaje anonimo nwn</p>
+                    <textarea class="mainGrid__message--textArea" placeholder="Escribe tu mensaje ^^" name="mensaje" id="mensaje"></textarea>
+                    <div class="mainGrid__message--textAreaBack">El mensaje se ha enviado correctamente <3</div>
+                    <button id="buttonForm" class="mainGrid__message--send" type="submit">
+                        <p id="textbutton">Enviar</p>
+                        <span id="buttonLoading" class="material-symbols-outlined">progress_activity</span>
+                    </button>
+                </form>
+            </div>
+            <div class="mainGrid__another">
+                <ul>
+                    <li><a target="_blank" id="coffe2" href="https://buymeacoffee.com/nikoc701" display="none"><span class="material-symbols-outlined">coffee</span>Buy me a coffe</a></li>
+                    <li><button class="coffe" id="mi-boton-coffee"><span class="material-symbols-outlined">coffee</span>Buy me a coffe</button></li>
+                    <script id="NikoC701" data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="NikoC701" data-description="Support me on Buy me a coffee!" data-color="#FF813F" data-position="Right" data-x_margin="600" data-y_margin="18"></script>
+                </ul>
+                <ul>
+                    <li><a class="porfolio" target="_blank" href="#"><span class="material-symbols-outlined">code_xml</span>Porfolio</a></li>
+                </ul>
+                <ul>
+                    <li><a class="typografy" target="_blank" href="#"><img src="archives/images/icons/nikoIcon.png" alt="nikoicon">Miztoria</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer--created">Pagina creada por mi C701</div>
+        <p class="footer--description">puedes Contactarme en segundacuentatkml@gmail.com</p>
+    </footer>
+    <script src="translate.js"></script>
+    <script src="code.js"></script>
+</body>
+</html>
